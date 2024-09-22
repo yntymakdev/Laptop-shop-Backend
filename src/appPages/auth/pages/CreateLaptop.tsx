@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 const CreateLaptop = () => {
   const [createPost, { isLoading, isError, isSuccess }] =
-    useGetPostsImagePostMutation(); // Используем мутацию для создания поста
+    useGetPostsImagePostMutation();
   const [formData, setFormData] = useState({
     id: "",
     brand: "",
@@ -14,8 +14,8 @@ const CreateLaptop = () => {
     processor: "",
     ram_size: "",
     storage_size: "",
-    image: null as File | null, // Файл изображения
-    laptop: "", // ID ноутбука
+    image: null as File | null,
+    laptop: "",
   });
 
   const handleChange = (
@@ -33,7 +33,6 @@ const CreateLaptop = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Проверяем, есть ли файл и значение поля laptop
     if (!formData.image) {
       console.error("No image file selected.");
       return;
@@ -52,9 +51,8 @@ const CreateLaptop = () => {
     fd.append("processor", formData.processor);
     fd.append("ram_size", formData.ram_size);
     fd.append("storage_size", formData.storage_size);
-    fd.append("laptop", formData.laptop); // Убедитесь, что это корректное значение
+    fd.append("laptop", formData.laptop);
 
-    // Добавляем файл изображения, если он выбран
     if (formData.image) {
       fd.append("image", formData.image);
     }

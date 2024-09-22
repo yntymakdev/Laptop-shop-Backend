@@ -1,0 +1,26 @@
+.welcome {
+  h1 {
+    color: white;
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 55px;
+    letter-spacing: 0%;
+  }
+}
+.welcomeBlock {
+  h1 {
+    color: white;
+  }
+  p {
+    color: white;
+  }
+}
+.welcomeBlock {
+  display: flex;
+}
+
+.textWelcome {
+  margin-left: 90px;
+}
