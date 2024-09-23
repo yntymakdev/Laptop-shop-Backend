@@ -40,7 +40,7 @@ const Welcome = () => {
               }}
             />
           </div>
-          <div className={module.sectionNavBarFirst}>
+          {/* <div className={module.sectionNavBarFirst}>
             <Image
               src={photo}
               width={493}
@@ -48,7 +48,7 @@ const Welcome = () => {
               quality={90}
               alt={"photo "}
             />
-          </div>
+          </div> */}
           <div className={module.sectionNavBarThird}>
             <Image
               src={voice}

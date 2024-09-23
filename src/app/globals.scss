@@ -3,13 +3,20 @@
   padding: 0;
   margin: 0;
 }
-body {
-  margin: 0;
-  background: url("../appPages/client/components/img/header.png") no-repeat
-    center;
+.bg {
+  // background: red; /* Временно включите это для проверки */
+  background-image: url("../public/img/header.png");
+  background-position: center;
   background-size: cover;
-  height: 100vh; // background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  // position: fixed;
+  // top: 0;
+  z-index: -1;
 }
+
 a {
   color: inherit;
   text-decoration: none;
